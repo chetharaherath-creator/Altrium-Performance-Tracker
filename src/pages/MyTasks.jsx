@@ -101,9 +101,9 @@ export default function MyTasks() {
                           variant="primary" 
                           className="text-xs px-4 py-1.5 disabled:opacity-50 disabled:cursor-not-allowed"
                           onClick={() => setSelectedTask(task)}
-                          disabled={expired}
+                          disabled={expired || task.status === 'completed'}
                         >
-                          {expired ? 'Expired' : 'Start Form'}
+                          {task.status === 'completed' ? 'Completed' : (expired ? 'Expired' : 'Start Form')}
                         </Button>
                       </td>
                     </tr>

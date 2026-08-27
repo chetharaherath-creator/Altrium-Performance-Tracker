@@ -86,8 +86,7 @@ router.get('/my-tasks', auth, async (req, res) => {
   try {
     const tasks = await Task.findAll({
       where: {
-        assignee_id: req.user.id,
-        status: 'pending'
+        assignee_id: req.user.id
       },
       include: [
         { model: User, as: 'reviewee', attributes: ['id', 'name', 'email'] }
