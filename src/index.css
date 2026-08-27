@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@theme {
+  --color-altrium-light: #E7F0F8;
+  --color-altrium-blue: #1A2F45;
+  --color-altrium-orange: #F68B1F;
+}
+
+@layer base {
+  body {
+    @apply bg-altrium-light text-altrium-blue font-sans;
+  }
+}
+
